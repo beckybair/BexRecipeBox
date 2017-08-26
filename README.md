@@ -1,5 +1,7 @@
 # README
 
+Here is a link to the Mackenzie Child youtube video course:  https://www.youtube.com/watch?v=QhdzE1yNs-0&index=3&list=PL23ZvcdS3XPLNdRYB_QyomQsShx59tpc-
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
