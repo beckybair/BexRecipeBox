@@ -42,6 +42,7 @@ gem 'paperclip', '~> 5.1'
 gem 'aws-sdk', '~>2.3'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'devise', '~> 4.3.0'
+gem 'omniauth-facebook'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
