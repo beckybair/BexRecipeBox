@@ -8,7 +8,11 @@
         <h1><%= @recipe.title %></h1>
         <p class="description"><%= @recipe.description %></p>
         
-        <p>Submitted by <%= @recipe.user.username %> (<%= @recipe.user.email %>)</p>
+        <% if @recipe.user %>       
+          <p>Submitted by: <%= @recipe.user.username %> (<%= @recipe.user.email %>)</p>
+        <% else %>
+          <p>Submitted by: User Left</p>
+        <% end %>
       </div>
     </div>
   </div>
@@ -40,9 +44,11 @@
     <div class="col-md-12">
       <%= link_to "Back", root_path, class: "btn btn-default" %>
       
-      <% if user_signed_in? && (@recipe.user.id == current_user.id) %>
-        <%= link_to "Edit", edit_recipe_path, class: "btn btn-default" %>
-        <%= link_to "Destroy", recipe_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default" %>
+      <% if user_signed_in? && @recipe.user %>
+        <% if @recipe.user.id == current_user.id %>
+          <%= link_to "Edit", edit_recipe_path, class: "btn btn-default" %>
+          <%= link_to "Destroy", recipe_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-default" %>
+        <% end %>
       <% end %>
     </div>
   </div>
