@@ -40,10 +40,14 @@ gem 'simple_form', '~> 3.4'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'paperclip', '~> 5.1'
 gem 'aws-sdk', '~>2.3'
-gem 'cocoon', '~> 1.2', '>= 1.2.9'
+gem 'cocoon', '~> 1.2.6', '>= 1.2.9'
 gem 'devise', '~> 4.3.0'
 gem 'omniauth-facebook'
 gem 'figaro'
+
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

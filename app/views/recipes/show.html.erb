@@ -9,9 +9,9 @@
         <p class="description"><%= @recipe.description %></p>
         
         <% if @recipe.user %>       
-          <p>Submitted by: <%= @recipe.user.username %> (<%= @recipe.user.email %>)</p>
+          <p>Submitted by: <%= @recipe.user.username %></p>
         <% else %>
-          <p>Submitted by: User Left</p>
+          <p>Submitted by: User Has Cancelled</p>
         <% end %>
       </div>
     </div>

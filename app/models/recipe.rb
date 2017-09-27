@@ -1,8 +1,8 @@
 class Recipe < ActiveRecord::Base
   belongs_to :user
   
-  has_many :ingredients,  dependent: :destroy 
-  has_many :directions,  dependent: :destroy 
+  has_many :ingredients, inverse_of: :recipe,  dependent: :destroy 
+  has_many :directions, inverse_of: :recipe,  dependent: :destroy 
   
   accepts_nested_attributes_for :ingredients,
                                 reject_if: proc { |attributes| attributes['name'].blank? },
